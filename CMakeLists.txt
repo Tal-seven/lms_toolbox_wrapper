@@ -28,7 +28,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(${catkin_INCLUDE_DIRS})
-
+set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
 add_executable(sickld ros/sickld/sickld.cpp)
 target_link_libraries(sickld ${catkin_LIBRARIES})
 
